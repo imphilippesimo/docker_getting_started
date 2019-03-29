@@ -21,6 +21,11 @@ EXPOSE 80
 # Define environment variable
 ENV NAME World
 
+#IN CASE YOU WANT TO GET RID OF WINDOWS CHARACTERS
+#ADD entrypoint.sh /entrypoint-dos.sh
+#RUN sed -e 's/\r$//' /entrypoint-dos.sh > /entrypoint.sh && chmod +x /entrypoint.sh
+#ADD /app.jar /app.jar
+
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
